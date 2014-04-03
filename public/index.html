@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="en" />
+    <link rel="stylesheet" href="/public/style.css" type="text/css">
+    <link rel="icon" href="/public/favicon.ico">
+    <title>GameMaster</title>
+
+</head>
+
+<body>
+    <script type="text/x-handlebars" data-template-name="games">
+        <section id="games">
+            <ul id="game-list">
+                {{#each}}
+                <li {{bind-attr class="isActive:active:ended"}}>
+                    <h2>{{title}}</h2>
+                    <ul class="players">
+                        <li class="player">Juho Rutila</li>
+                        <li class="player">Petri Purho</li>
+                        <li class="player">Oskari Porkka</li>
+                    </ul>
+                </li>
+                {{/each}}
+            </ul>
+            <button class="newGame">New game!</button>
+        </section>
+    </script>
+
+    <section id="gamemasterapp">
+        <header id="header">
+            <h1>GameMaster</h1>
+        </header>
+    </section>
+
+    <script src="public/libs/jquery/dist/jquery.min.js"></script>
+    <script src="public/libs/handlebars/handlebars.min.js"></script>
+    <script src="public/libs/ember/ember.min.js"></script>
+    <script src="public/libs/ember-data/ember-data.min.js"></script>
+
+    <script src="public/js/application.js"></script>
+    <script src="public/js/router.js"></script>
+
+    <script src="public/js/models/game.js"></script>
+</body>
+</html>
